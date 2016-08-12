@@ -1,0 +1,12 @@
+sbt:
+  image: nightscape/docker-sbt:latest
+  mem_limit: 2048000000
+  volumes:
+  - /etc/localtime:/etc/localtime
+  - ${HOME}/.sbt:/root/.sbt
+  - ${HOME}/.ivy2:/root/.ivy2
+  - ${HOME}/.ssh/support_key:/root/.ssh/support_key
+  - .:/code
+  ports:
+  - 9000:9000
+  working_dir: /code

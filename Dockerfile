@@ -1,4 +1,4 @@
-FROM nightscape/docker-sbt:0.13.8
+FROM nightscape/docker-sbt:latest
 
 MAINTAINER Daniel Rhoades <daniel@danielrhoades.com>
 
@@ -12,7 +12,7 @@ ADD . /home/microservice/
 
 RUN sbt compile && \
     sbt assembly
-    
+
 EXPOSE 9000
 
 # Run the microservice
